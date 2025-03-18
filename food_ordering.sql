@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2025 at 05:11 AM
+-- Generation Time: Mar 18, 2025 at 05:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,29 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `food_ordering`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(10) NOT NULL,
-  `name` varchar(225) NOT NULL,
-  `email` varchar(225) NOT NULL,
-  `password` varchar(225) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL,
-  `session_token` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`, `session_token`) VALUES
-(2, 'waiferkolar', 'waiferkolar@gmail.com', 'waiFer123@', '2025-03-09 04:18:06', '2025-03-09 04:18:06', 'b45c02e148da22ce7059c65ee3ce518be7f3b65d7b0db92e27ab4f983a8d834e');
 
 -- --------------------------------------------------------
 
@@ -325,13 +302,6 @@ INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `role_as`, `cre
 --
 
 --
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
 -- Indexes for table `carts`
 --
 ALTER TABLE `carts`
@@ -397,12 +367,6 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `carts`
